@@ -1,1 +1,3 @@
-docker build -t mysql_server_dock --file Dockerfile --no-cache
+#!/bin/bash
+
+docker build -t mysql_server_dock . --no-cache
