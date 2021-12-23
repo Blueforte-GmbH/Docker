@@ -37,6 +37,15 @@ $ <ENTER PASSWORD>
 Exit Mysql in docker with `\q`. 
 
 
+
+---
+# Workshop steps
+1. Create basic containers with workdir and without
+2. create with `--no-cache` and without it
+3. Remove images
+4. Recreate 
+
+
 ---
 ## Some reference links 
 - [Volume Permissions](https://denibertovic.com/posts/handling-permissions-with-docker-volumes/)
