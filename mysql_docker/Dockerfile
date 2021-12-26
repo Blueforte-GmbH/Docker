@@ -12,6 +12,5 @@ COPY create_tables.sql .
 COPY query_db.py .
 
 RUN chmod +x ./run_mysql.sh
-# RUN python3 query_db.py
 
-CMD ./run_mysql.sh && python3 query_db.py
+CMD [ "./run_mysql.sh" ]
