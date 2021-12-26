@@ -1,7 +1,7 @@
 import mysql.connector
 
 if __name__ == "__main__":
-    o_conn = mysql.connector.connect(user='vra', password='db-password', database='test_sql_database')
+    o_conn = mysql.connector.connect(user='vra', password='mdapass', database='test_sql_database')
     o_cursor = o_conn.cursor()
 
     s_query = "SELECT * FROM auto_types"

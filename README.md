@@ -14,7 +14,21 @@ docker run -it --mount src="$(pwd)",target=/test_container,type=bind  mysql_serv
 ```
 
 
+# Build all together 
+`docker build -t mysql_server_workshop . --no-cache`
 
+Stop the running container  and remove all dangling images
+`docker stop mysql_server_workshop`
+
+```
+sudo docker run -d -p 3306:3306 --name workshop_runner mysql_server_workshop
+
+python3 query_db.py
+```
+
+
+
+---
 # MySql
 
 Start and service with 

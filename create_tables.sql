@@ -1,7 +1,10 @@
 -- ALTER USER 'root'@'localhost' IDENTIFIED BY 'NewPassMDA$$1';
 
 CREATE USER 'vra'@'localhost' IDENTIFIED BY 'mdapass';
+CREATE USER 'vra'@'%' IDENTIFIED BY 'mdapass';
 GRANT ALL PRIVILEGES ON test_sql_database.* TO 'vra'@'localhost';
+GRANT ALL PRIVILEGES ON test_sql_database.* TO 'vra'@'%';
+
 
 CREATE DATABASE test_sql_database;
 USE test_sql_database;
