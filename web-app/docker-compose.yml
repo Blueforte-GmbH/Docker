@@ -1,10 +1,12 @@
-version: "3.9"
-services:
-  web:
-    build: .                # Builds the Dockerfile
-    ports:
-      - "5000:5000"         # bind the container and the host machine to the exposed port
-    volumes:
-      - .:/code
-  redis:
-    image: "redis:alpine"   # pulls redis image from the registry
+version: "3.9"                # latest version of compose
+services: 
+  web: 
+    build: .                  # Builds the Dockerfile
+    ports: 
+      - "5000:5000"           # bind the container and the host machine to the exposed port
+    volumes: 
+      - .:/code 
+    environment: 
+      FLASK_ENV: development  # allow flask to to run in development mode
+  redis: 
+    image: "redis:alpine"     # pulls redis image from the registry
