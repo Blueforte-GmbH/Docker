@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  web:
+    build: .                # Builds the Dockerfile
+    ports:
+      - "5000:5000"         # bind the container and the host machine to the exposed port
+    volumes:
+      - .:/code
+  redis:
+    image: "redis:alpine"   # pulls redis image from the registry

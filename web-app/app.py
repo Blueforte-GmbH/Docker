@@ -16,7 +16,7 @@ def get_hit_count():
             retries -= 1
             time.sleep(0.5)
 
-@app.route('/')
+@app.route('/') 
 def hello():
     count = get_hit_count()
-    return 'Hello MDAs! We have been seen {} times.\n'.format(count)
+    return ':wave Hello MDAs! from the Docker container. We have been here {} times.\n'.format(count)
