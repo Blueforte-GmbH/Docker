@@ -5,10 +5,6 @@
 ```shell
 docker build -t mysql_server_workshop . --no-cache
 ```
-Stop the running container and remove all dangling images
-```
-docker stop mysql_server_workshop
-```
 
 Run with (mounted volume) if needed else run normally.
 ```shell
@@ -19,10 +15,17 @@ Run normally with the exposed port.
 ```
 sudo docker run -d -p 3306:3306 --name workshop_runner mysql_server_workshop
 
+# move into container
+docker exec -it mysql_server_workshop /bin/bash
+
 # inside the container
 python3 query_db.py
 ```
 
+Stop the running container and remove all dangling images
+```
+docker stop workshop_runner
+```
 
 ---
 # MySql commands
