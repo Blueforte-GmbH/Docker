@@ -1,0 +1,28 @@
+FROM mysql/mysql-server as builder
+
+WORKDIR /mysql_docker
+
+COPY create_tables.sql .
+COPY run_mysql.sh .
+
+EXPOSE 3306
+RUN chmod +x ./run_mysql.sh
+# RUN ["./run_mysql.sh"]
+
+
+# FROM python:3.9-slim
+# RUN apt-get update && apt-get install -y pip vim wget curl sudo
+# RUN pip install mysql-connector-python
+# WORKDIR /sql_run
+
+# COPY query_db.py .
+# COPY --from=builder /mysql_docker/ /sql_run/
+
+# CMD ["python3", "query_db.py"]
+
+
+
+
+
+
+

@@ -13,7 +13,10 @@ docker run -it --mount src="$(pwd)",target=/mysql_docker,type=bind  mysql_server
 
 Run normally with the exposed port. 
 ```
-sudo docker run -d -p 3306:3306 --name workshop_runner mysql_server_workshop
+docker run -d -p 3306:3306 --name workshop_runner mysql_server_workshop
+
+# run with volume mount and remove immediately 
+docker run --rm -v $(pwd):/mysql_docker -p 3306:3306 -ti mysql_server_workshop
 
 # move into container
 docker exec -it mysql_server_workshop /bin/bash

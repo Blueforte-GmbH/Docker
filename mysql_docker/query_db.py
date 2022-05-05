@@ -10,6 +10,7 @@ if __name__ == "__main__":
 
     for a_row in o_cursor:
         print(a_row)
-
+    
+    print("Closing connection to database.....")
     o_cursor.close()
     o_conn.close()

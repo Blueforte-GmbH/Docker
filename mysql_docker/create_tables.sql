@@ -1,4 +1,4 @@
--- ALTER USER 'root'@'localhost' IDENTIFIED BY 'NewPassMDA$$1';
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'pass';
 
 CREATE USER 'vra'@'localhost' IDENTIFIED BY 'mdapass';
 CREATE USER 'vra'@'%' IDENTIFIED BY 'mdapass';
